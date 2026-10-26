@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHEBANG | Classic & Blues Rock Coverband Wien</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rock: {
+                            bg: '#0d0d0d',
+                            card: '#181818',
+                            border: '#2a2a2a',
+                            gold: '#e5a93b',
+                            goldHover: '#cca030',
+                            accentRed: '#8b0000',
+                            textMuted: '#9ca3af'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Glowing & Visual Effects */
+        .spotlight-glow {
+            background-image: url('Images/Bandfoto.jpg');
+            background-size: cover;
+            background-position: 58% center;
+            background-repeat: no-repeat;
+        }
+        .amp-texture {
+            background-color: #121212;
+            background-image: radial-gradient(#222 15%, transparent 16%), radial-gradient(#222 15%, transparent 16%);
+            background-size: 8px 8px;
+            background-position: 0 0, 4px 4px;
+        }
+        .vinyl-spin {
+            animation: spin 20s linear infinite;
+        }
+        .vinyl-paused {
+            animation-play-state: paused;
+        }
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        .gold-border-glow:hover {
+            box-shadow: 0 0 15px rgba(229, 169, 59, 0.4);
+        }
+        .logo{
+            background-image: url('Images/Logo-removebg-preview.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 200px;
+            height: 70px;
+            display: block;
+        }
+        .schrift
+        {
+            background-size: contain;
+            width: 700px;
+            height: 550px;
+            top: 0px;
+            left: 100;
+        }
+        .logounten{
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 100px;
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-rock-bg text-gray-100 font-sans antialiased selection:bg-rock-gold selection:text-black">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-rock-bg/90 backdrop-blur-md border-b border-rock-border/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a class="logo">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wider uppercase">
+                    <a href="#about" class="hover:text-rock-gold transition">Über Uns</a>
+                    <a href="#members" class="hover:text-rock-gold transition">Band</a>
+                    <a href="#repertoire" class="hover:text-rock-gold transition">Repertoire</a>
+                    <a href="#media" class="hover:text-rock-gold transition">Media</a>
+                    <a href="#gigs" class="hover:text-rock-gold transition">Live Dates</a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-full bg-rock-gold text-black font-bold hover:bg-rock-goldHover transition transform hover:-translate-y-0.5">
+                        Booking
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-gray-300 hover:text-white focus:outline-none p-2" aria-label="Menü öffnen">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-rock-card border-b border-rock-border px-4 pt-2 pb-6 space-y-4 text-center">
+            <a href="#about" class="block py-2 text-gray-300 hover:text-rock-gold tracking-wider uppercase">Über Uns</a>
+            <a href="#repertoire" class="block py-2 text-gray-300 hover:text-rock-gold tracking-wider uppercase">Repertoire</a>
+            <a href="#media" class="block py-2 text-gray-300 hover:text-rock-gold tracking-wider uppercase">Media</a>
+            <a href="#members" class="block py-2 text-gray-300 hover:text-rock-gold tracking-wider uppercase">Band</a>
+            <a href="#gigs" class="block py-2 text-gray-300 hover:text-rock-gold tracking-wider uppercase">Live Dates</a>
+            <a href="#contact" class="inline-block mt-2 w-full py-3 rounded-full bg-rock-gold text-black font-bold tracking-wider uppercase">
+                Booking Anfragen
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden spotlight-glow">
+        <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-rock-gold/5 blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 left-10 w-80 h-80 rounded-full bg-red-900/10 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center z-10 py-16">
+            <div class="mb-6">
+                <img src="Images/Schrift.png" alt="Shebang Schriftzug" class="schrift">  
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-rock-gold text-black font-bold text-lg hover:bg-rock-goldHover transition transform hover:-translate-y-1 shadow-lg shadow-rock-gold/20">
+                    <i class="fa-solid fa-calendar-check mr-2"></i> Band Jetzt Buchen
+                </a>
+                <a href="#gigs" class="w-full sm:w-auto px-8 py-4 rounded-full bg-rock-card border border-rock-border hover:border-rock-gold text-white font-bold text-lg transition transform hover:-translate-y-1">
+                    <i class="fa-solid fa-ticket mr-2"></i> Nächste Gigs Ansehen
+                </a>
+            </div>
+
+           
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-stone-950 border-t border-rock-border relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-rock-gold mb-2">Purer Sound auf der Bühne</h2>
+                <h3 class="text-3xl sm:text-5xl font-extrabold text-white mb-6">Wer ist SHEBANG?</h3>
+                <div class="space-y-4 text-gray-300 leading-relaxed font-light text-left sm:text-center">
+                    <p>
+                        Wenn die Verstärker glühen und die Riffs sitzen, steht <strong class="text-white">Shebang</strong> auf der Bühne. Wir sind eine vierköpfige Rock-Coverband aus Wien mit einer leidenschaftlichen Hingabe für zeitlose Rock- und Blues-Klassiker.
+                    </p>
+                    <p>
+                        Unser Sound verbindet die rohe Energie von Legenden wie <em class="text-rock-gold font-normal">Jimi Hendrix</em>, <em class="text-rock-gold font-normal">Eric Clapton</em> und <em class="text-rock-gold font-normal">Black Sabbath</em> mit unvergesslichen Klassikern von <em class="text-rock-gold font-normal">The Doors</em>, <em class="text-rock-gold font-normal">The Beatles</em> und Soul-Ikone <em class="text-rock-gold font-normal">Amy Winehouse</em>.
+                    </p>
+                    <p>
+                        Keine Playbacks, keine Kompromisse – einfach ehrlicher Live-Rock mit vier starken Charakteren.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAND MEMBERS SECTION -->
+    <section id="members" class="py-24 bg-rock-bg border-t border-rock-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-rock-gold mb-2">Lineup</h2>
+                <h3 class="text-4xl font-black text-white uppercase">Die Bandmitglieder</h3>
+                <p class="text-gray-400 mt-4">Vier Musiker, eine gemeinsame Leidenschaft.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Member 1: Adrijan -->
+                <div class="bg-rock-card rounded-xl border border-rock-border p-6 flex flex-col items-center text-center transition hover:border-rock-gold gold-border-glow group">
+                    <div class="w-32 h-32 rounded-full bg-neutral-800 border-2 border-rock-gold/50 flex items-center justify-center mb-6 overflow-hidden relative shadow-lg">
+                        <!-- Hier kannst du dein echtes Bandfoto einfügen: z.B. <img src="adrijan.jpg" alt="Adrijan" class="w-full h-full object-cover"> -->
+                        <img src="Images/Adrijan.png" alt="Adrijan" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-1">Adrijan</h4>
+                    <span class="text-xs uppercase font-bold text-rock-gold tracking-widest mb-4">Gesang & Lead E-Gitarre</span>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        Sorgt für Power-Gesang und bringt das Publikum zum Bewegen mit seinen Soli.
+                    </p>
+                </div>
+
+                <!-- Member 2: Martin -->
+                <div class="bg-rock-card rounded-xl border border-rock-border p-6 flex flex-col items-center text-center transition hover:border-rock-gold gold-border-glow group">
+                    <div class="w-32 h-32 rounded-full bg-neutral-800 border-2 border-rock-gold/50 flex items-center justify-center mb-6 overflow-hidden relative shadow-lg">
+                        <!-- Hier kannst du dein echtes Bandfoto einfügen -->
+                        <img src="Images/Martin.jpg" alt="Martin" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-1">Martin</h4>
+                    <span class="text-xs uppercase font-bold text-rock-gold tracking-widest mb-4">Bass & Gesang</span>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        Das solide Fundament am Bass und liefert harmonische Vocals für den perfekten Sound.
+                    </p>
+                </div>
+
+                <!-- Member 3: Lea -->
+                <div class="bg-rock-card rounded-xl border border-rock-border p-6 flex flex-col items-center text-center transition hover:border-rock-gold gold-border-glow group">
+                    <div class="w-32 h-32 rounded-full bg-neutral-800 border-2 border-rock-gold/50 flex items-center justify-center mb-6 overflow-hidden relative shadow-lg">
+                        <!-- Hier kannst du dein echtes Bandfoto einfügen -->
+                        <img src="Images/Lea.jpg" alt="Lea" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-1">Lea</h4>
+                    <span class="text-xs uppercase font-bold text-rock-gold tracking-widest mb-4">E-Gitarre & Gesang</span>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        Liefert kraftvoleln Rythmus und Vocals mit garantiertem Gänsehaut-Effekt.
+                    </p>
+                </div>
+
+                <!-- Member 4: Andreas -->
+                <div class="bg-rock-card rounded-xl border border-rock-border p-6 flex flex-col items-center text-center transition hover:border-rock-gold gold-border-glow group">
+                    <div class="w-32 h-32 rounded-full bg-neutral-800 border-2 border-rock-gold/50 flex items-center justify-center mb-6 overflow-hidden relative shadow-lg">
+                        <!-- Hier kannst du dein echtes Bandfoto einfügen -->
+                        <img src="Images/Andi.jpg" alt="Andreas" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-1">Andreas</h4>
+                    <span class="text-xs uppercase font-bold text-rock-gold tracking-widest mb-4">Schlagzeug</span>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">
+                        Manche sagen er sei der beste Drummer aus Wien. Stimmt auch!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REPERTOIRE SECTION -->
+    <section id="repertoire" class="py-24 bg-stone-950 border-t border-rock-border">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-rock-gold mb-2">Setlist & Einflüsse</h2>
+            <h3 class="text-4xl font-black text-white mb-6 uppercase">Der Shebang Sound</h3>
+            <p class="text-gray-300 font-light leading-relaxed mb-12">
+                Unsere Setlist ist eine energiegeladene Hommage an die wichtigsten Ikonen der Rock- und Musikgeschichte.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="px-5 py-3 rounded-xl bg-rock-card border border-rock-border text-sm font-bold text-white">Jimi Hendrix</span>
+                <span class="px-5 py-3 rounded-xl bg-rock-card border border-rock-border text-sm font-bold text-white">Eric Clapton</span>
+                <span class="px-5 py-3 rounded-xl bg-rock-card border border-rock-border text-sm font-bold text-white">Black Sabbath</span>
+                <span class="px-5 py-3 rounded-xl bg-rock-card border border-rock-border text-sm font-bold text-white">Amy Winehouse</span>
+                <span class="px-5 py-3 rounded-xl bg-rock-card border border-rock-border text-sm font-bold text-white">The Doors</span>
+                <span class="px-5 py-3 rounded-xl bg-rock-card border border-rock-border text-sm font-bold text-white">The Beatles</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEDIA SECTION -->
+    <section id="media" class="py-24 bg-rock-bg border-t border-rock-border">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-rock-gold mb-2">Media</h2>
+            <h3 class="text-4xl font-black text-white uppercase mb-6">Live-Video</h3>
+            <p class="text-gray-300 font-light leading-relaxed mb-10">
+                Ein kurzer Einblick in unseren Sound – nur beim Klick abgespielt.
+            </p>
+
+            <div id="youtube-video-wrapper" class="mx-auto w-full max-w-4xl overflow-hidden rounded-2xl border border-rock-border bg-stone-900 shadow-2xl shadow-rock-gold/10">
+                <div id="youtube-placeholder" class="flex items-center justify-center min-h-[320px] sm:min-h-[420px] bg-gradient-to-br from-stone-800 via-stone-900 to-rock-card">
+                    <button id="load-youtube" type="button" class="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-rock-gold text-black font-bold text-lg hover:bg-rock-goldHover transition shadow-lg shadow-rock-gold/20">
+                        <i class="fa-brands fa-youtube text-2xl"></i>
+                        Video Abspielen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE DATES / GIGS SECTION -->
+    <section id="gigs" class="py-24 bg-rock-bg border-t border-rock-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-rock-gold mb-2">Erlebe Uns Live</h2>
+                <h3 class="text-4xl font-black text-white uppercase">Kommende Termine</h3>
+                <p class="text-gray-400 mt-2">Wir sehen uns vor der Bühne in Wien!</p>
+            </div>
+
+            <div class="space-y-4 max-w-4xl mx-auto">
+                <!-- Gig Item 1 -->
+                <div class="bg-rock-card rounded-xl border border-rock-border p-6 flex flex-col sm:flex-row items-center justify-between gap-6 hover:border-rock-gold/60 transition">
+                    <div class="flex items-center space-x-6 text-center sm:text-left">
+                        <div class="bg-stone-900 p-4 rounded-lg border border-rock-border text-center min-w-[90px]">
+                            <span class="block text-2xl font-black text-rock-gold">12</span>
+                            <span class="text-xs uppercase tracking-widest text-gray-400">NOV 2026</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Down Under Aussie Pub</h4>
+                            <p class="text-sm text-gray-400">Magdalenenstraße 32, 1060 Wien</p>
+                            <span class="inline-block mt-2 text-xs text-rock-gold bg-rock-gold/10 px-2.5 py-1 rounded">Live Gig</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+                        <a href="#"
+                           class="calendar-btn google-btn w-full sm:w-auto text-center px-4 py-2.5 rounded-full bg-[#4285F4] text-white text-xs font-bold border border-[#4285F4] transition hover:opacity-90"
+                           data-kind="google"
+                           data-title="SHEBANG Live @ Down Under Aussie Pub"
+                           data-date="2026-11-12"
+                           data-time="20:30"
+                           data-location="Magdalenenstraße 32, 1060 Wien">
+                            <i class="fa-brands fa-google mr-2"></i>Google
+                        </a>
+                        <a href="#"
+                           class="calendar-btn apple-btn w-full sm:w-auto text-center px-4 py-2.5 rounded-full bg-stone-900 text-white text-xs font-bold border border-rock-border transition hover:bg-rock-gold hover:text-black"
+                           data-kind="apple"
+                           data-title="SHEBANG Live @ Down Under Aussie Pub"
+                           data-date="2026-11-12"
+                           data-time="20:30"
+                           data-location="Magdalenenstraße 32, 1060 Wien">
+                            <i class="fa-brands fa-apple mr-2"></i>Apple
+                        </a>
+                       
+                    </div>
+                </div>
+
+                <!-- Gig Item 2 -->
+                <div class="bg-rock-card rounded-xl border border-rock-border p-6 flex flex-col sm:flex-row items-center justify-between gap-6 hover:border-rock-gold/60 transition">
+                    <div class="flex items-center space-x-6 text-center sm:text-left">
+                        <div class="bg-stone-900 p-4 rounded-lg border border-rock-border text-center min-w-[90px]">
+                            <span class="block text-2xl font-black text-rock-gold">19</span>
+                            <span class="text-xs uppercase tracking-widest text-gray-400">NOV 2026</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Down Under Aussie Pub</h4>
+                            <p class="text-sm text-gray-400">Magdalenenstraße 32, 1060 Wien</p>
+                            <span class="inline-block mt-2 text-xs text-rock-gold bg-rock-gold/10 px-2.5 py-1 rounded">Live Gig</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+                        <a href="#"
+                           class="calendar-btn google-btn w-full sm:w-auto text-center px-4 py-2.5 rounded-full bg-[#4285F4] text-white text-xs font-bold border border-[#4285F4] transition hover:opacity-90"
+                           data-kind="google"
+                           data-title="SHEBANG Live @ Down Under Aussie Pub"
+                           data-date="2026-11-19"
+                           data-time="20:30"
+                           data-location="Magdalenenstraße 32, 1060 Wien">
+                            <i class="fa-brands fa-google mr-2"></i>Google
+                        </a>
+                        <a href="#"
+                           class="calendar-btn apple-btn w-full sm:w-auto text-center px-4 py-2.5 rounded-full bg-stone-900 text-white text-xs font-bold border border-rock-border transition hover:bg-rock-gold hover:text-black"
+                           data-kind="apple"
+                           data-title="SHEBANG Live @ Down Under Aussie Pub"
+                           data-date="2026-11-19"
+                           data-time="20:30"
+                           data-location="Magdalenenstraße 32, 1060 Wien">
+                            <i class="fa-brands fa-apple mr-2"></i>Apple
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <!-- Gig Item 3 -->
+                <div class="bg-rock-card rounded-xl border border-rock-border p-6 flex flex-col sm:flex-row items-center justify-between gap-6 hover:border-rock-gold/60 transition">
+                    <div class="flex items-center space-x-6 text-center sm:text-left">
+                        <div class="bg-stone-900 p-4 rounded-lg border border-rock-border text-center min-w-[90px]">
+                            <span class="block text-2xl font-black text-rock-gold">15</span>
+                            <span class="text-xs uppercase tracking-widest text-gray-400">JAN 2027</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Loop Wien</h4>
+                            <p class="text-sm text-gray-400">Gürtelbogen 26-27, 1080 Wien</p>
+                            <span class="inline-block mt-2 text-xs text-rock-gold bg-rock-gold/10 px-2.5 py-1 rounded">Live Gig</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+                        <a href="#"
+                           class="calendar-btn google-btn w-full sm:w-auto text-center px-4 py-2.5 rounded-full bg-[#4285F4] text-white text-xs font-bold border border-[#4285F4] transition hover:opacity-90"
+                           data-kind="google"
+                           data-title="SHEBANG Live @ Loop Wien"
+                           data-date="2027-01-15"
+                           data-time="20:00"
+                           data-location="Gürtelbogen 26-27, 1080 Wien">
+                            <i class="fa-brands fa-google mr-2"></i>Google
+                        </a>
+                        <a href="#"
+                           class="calendar-btn apple-btn w-full sm:w-auto text-center px-4 py-2.5 rounded-full bg-stone-900 text-white text-xs font-bold border border-rock-border transition hover:bg-rock-gold hover:text-black"
+                           data-kind="apple"
+                           data-title="SHEBANG Live @ Loop Wien"
+                           data-date="2027-01-15"
+                           data-time="20:00"
+                           data-location="Gürtelbogen 26-27, 1080 Wien">
+                            <i class="fa-brands fa-apple mr-2"></i>Apple
+                        </a>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & BOOKING SECTION -->
+    <section id="contact" class="py-24 bg-stone-950 border-t border-rock-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Text -->
+                <div>
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-rock-gold mb-2">Booking & Anfragen</h2>
+                    <h3 class="text-4xl font-black text-white uppercase mb-6">Holt Shebang auf eure Bühne!</h3>
+                    <p class="text-gray-300 font-light leading-relaxed mb-8">
+                        Für Pubs, Festivals, Privatevents oder Club-Gigs – schreibt uns direkt an!
+                    </p>
+
+                    <div class="space-y-6 text-gray-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-lg bg-rock-card border border-rock-border flex items-center justify-center text-rock-gold">
+                                <i class="fa-solid fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase tracking-wider text-gray-500">E-Mail für Booking</span>
+                                <a href="mailto:realshebang@gmail.com" class="text-lg font-bold text-white hover:text-rock-gold">realshebang@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-lg bg-rock-card border border-rock-border flex items-center justify-center text-rock-gold">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase tracking-wider text-gray-500">Standort</span>
+                                <span class="text-lg font-bold text-white">Wien & Umgebung</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="bg-rock-card p-8 rounded-2xl border border-rock-border">
+                    <form id="booking-form" action="https://formsubmit.co/realshebang@gmail.com" method="POST" class="space-y-6">
+                        <input type="hidden" name="_subject" value="Neue Booking-Anfrage von SHEBANG Website">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div>
+                            <label for="name" class="block text-xs uppercase font-bold tracking-wider text-gray-300 mb-2">Dein Name / Veranstalter</label>
+                            <input type="text" id="name" name="name" required class="w-full bg-stone-900 border border-rock-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-rock-gold transition" placeholder="z.B. Tom Muster">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-xs uppercase font-bold tracking-wider text-gray-300 mb-2">E-Mail Adresse</label>
+                                <input type="email" id="email" name="email" required class="w-full bg-stone-900 border border-rock-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-rock-gold transition" placeholder="name@beispiel.at">
+                            </div>
+                            <div>
+                                <label for="date" class="block text-xs uppercase font-bold tracking-wider text-gray-300 mb-2">Geplantes Datum</label>
+                                <input type="date" id="date" name="date" class="w-full bg-stone-900 border border-rock-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-rock-gold transition">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="location" class="block text-xs uppercase font-bold tracking-wider text-gray-300 mb-2">Location / Event-Art</label>
+                            <input type="text" id="location" name="location" class="w-full bg-stone-900 border border-rock-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-rock-gold transition" placeholder="z.B. Pub Festival Wien">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs uppercase font-bold tracking-wider text-gray-300 mb-2">Deine Nachricht</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full bg-stone-900 border border-rock-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-rock-gold transition" placeholder="Erzähl uns kurz von deiner Veranstaltung..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-full bg-rock-gold text-black font-bold text-lg hover:bg-rock-goldHover transition">
+                            Anfrage Senden <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                    <div id="form-message" class="hidden mt-4 p-4 rounded-lg bg-emerald-900/50 border border-emerald-500 text-emerald-200 text-center text-sm">
+                        Vielen Dank! Deine Booking-Anfrage wurde erfolgreich gesendet.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 border-t border-rock-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div>
+                <img src="Images/Logo-removebg-preview.png" alt="Shebang Logo" class="logounten"></img>
+                <p class="text-xs text-gray-500 mt-1">Classic & Blues Rock Coverband aus Wien.</p>
+            </div>
+            <div class="flex space-x-6 text-xl text-gray-400">
+                <a href="https://instagram.com/shebang.official" target="_blank" rel="noopener noreferrer" class="hover:text-rock-gold transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@shebang.official" target="_blank" rel="noopener noreferrer" class="hover:text-rock-gold transition" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="text-xs text-gray-600">
+                &copy; 2026 SHEBANG. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Mobile Navigation Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close Mobile Menu on Click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Calendar export helpers
+        function toGoogleCalendarDate(date) {
+            const utc = new Date(date.getTime() - (date.getTimezoneOffset() * 60000));
+            return utc.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+        }
+
+        function formatICSDate(date) {
+            const pad = (value) => String(value).padStart(2, '0');
+            return `${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}T${pad(date.getHours())}${pad(date.getMinutes())}${pad(date.getSeconds())}`;
+        }
+
+        function createICS(title, startDate, endDate, location) {
+            return [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//SHEBANG//Calendar//DE',
+                'BEGIN:VEVENT',
+                `UID:${Date.now()}@shebang`,
+                `DTSTAMP:${formatICSDate(new Date())}`,
+                `DTSTART:${formatICSDate(startDate)}`,
+                `DTEND:${formatICSDate(endDate)}`,
+                `SUMMARY:${title}`,
+                `LOCATION:${location}`,
+                'DESCRIPTION:Live Gig von SHEBANG',
+                'END:VEVENT',
+                'END:VCALENDAR'
+            ].join('\n');
+        }
+
+        function openGoogleCalendar(title, date, time, location) {
+            const startDate = new Date(`${date}T${time}:00`);
+            const endDate = new Date(startDate.getTime() + 2 * 60 * 60 * 1000);
+
+            const googleUrl = new URL('https://calendar.google.com/calendar/render');
+            googleUrl.searchParams.set('action', 'TEMPLATE');
+            googleUrl.searchParams.set('text', title);
+            googleUrl.searchParams.set('dates', `${toGoogleCalendarDate(startDate)}/${toGoogleCalendarDate(endDate)}`);
+            googleUrl.searchParams.set('location', location);
+            googleUrl.searchParams.set('details', 'Live Gig von SHEBANG');
+            window.open(googleUrl.toString(), '_blank');
+        }
+
+        function downloadAppleCalendar(title, date, time, location) {
+            const startDate = new Date(`${date}T${time}:00`);
+            const endDate = new Date(startDate.getTime() + 2 * 60 * 60 * 1000);
+            const icsContent = createICS(title, startDate, endDate, location);
+            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.ics`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(link.href);
+        }
+
+        document.querySelectorAll('.calendar-btn').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                const kind = button.dataset.kind;
+                const title = button.dataset.title;
+                const date = button.dataset.date;
+                const time = button.dataset.time || '20:30';
+                const location = button.dataset.location || 'Wien';
+
+                if (kind === 'google') {
+                    openGoogleCalendar(title, date, time, location);
+                } else if (kind === 'apple') {
+                    downloadAppleCalendar(title, date, time, location);
+                }
+            });
+        });
+
+        const loadYoutubeButton = document.getElementById('load-youtube');
+        if (loadYoutubeButton) {
+            loadYoutubeButton.addEventListener('click', () => {
+                const wrapper = document.getElementById('youtube-video-wrapper');
+                const youtubeId = 'cS-zjokm02U';
+                const iframe = document.createElement('iframe');
+                iframe.src = `https://www.youtube-nocookie.com/embed/${youtubeId}?autoplay=1&rel=0`;
+                iframe.title = 'SHEBANG YouTube Video';
+                iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                iframe.allowFullscreen = true;
+                iframe.className = 'w-full aspect-video';
+                wrapper.innerHTML = '';
+                wrapper.appendChild(iframe);
+            });
+        }
+
+        const bookingForm = document.getElementById('booking-form');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                const formMsg = document.getElementById('form-message');
+                const submitButton = bookingForm.querySelector('button[type="submit"]');
+                submitButton.disabled = true;
+                submitButton.textContent = 'Wird gesendet...';
+
+                const formData = new FormData(bookingForm);
+
+                fetch(bookingForm.action, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(() => {
+                    formMsg.textContent = 'Vielen Dank! Deine Booking-Anfrage wurde erfolgreich gesendet.';
+                    formMsg.classList.remove('hidden');
+                    formMsg.classList.remove('bg-red-900/50', 'border-red-500', 'text-red-200');
+                    formMsg.classList.add('bg-emerald-900/50', 'border-emerald-500', 'text-emerald-200');
+                    bookingForm.reset();
+                    setTimeout(() => {
+                        formMsg.classList.add('hidden');
+                    }, 5000);
+                })
+                .catch(() => {
+                    formMsg.textContent = 'Es gab ein Problem beim Senden. Bitte schreibe uns direkt an realshebang@gmail.com.';
+                    formMsg.classList.remove('hidden');
+                    formMsg.classList.remove('bg-emerald-900/50', 'border-emerald-500', 'text-emerald-200');
+                    formMsg.classList.add('bg-red-900/50', 'border-red-500', 'text-red-200');
+                })
+                .finally(() => {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Anfrage Senden <i class="fa-solid fa-paper-plane ml-2"></i>';
+                });
+            });
+        }
+    </script>
+</body>
+</html>

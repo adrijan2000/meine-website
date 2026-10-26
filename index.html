@@ -62,28 +62,65 @@
         .gold-border-glow:hover {
             box-shadow: 0 0 15px rgba(229, 169, 59, 0.4);
         }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
         .logo{
             background-image: url('Images/Logo-removebg-preview.png');
             background-size: contain;
             background-repeat: no-repeat;
-            width: 200px;
+            width: clamp(120px, 22vw, 200px);
             height: 70px;
             display: block;
         }
         .schrift
         {
-            background-size: contain;
-            width: 700px;
-            height: 550px;
-            top: 0px;
-            left: 100;
+            display: block;
+            width: min(90vw, 700px);
+            height: auto;
+            margin: 0 auto;
         }
         .logounten{
             background-size: contain;
             background-repeat: no-repeat;
-            width: 100px;
-            height: 100px;
+            width: clamp(72px, 18vw, 100px);
+            height: auto;
             display: block;
+        }
+
+        @media (max-width: 640px) {
+            .spotlight-glow {
+                background-position: 62% center;
+            }
+
+            nav .h-20 {
+                height: 4.25rem;
+            }
+
+            .hero-content {
+                padding-top: 2rem;
+                padding-bottom: 3rem;
+            }
+
+            .hero-cta {
+                width: 100%;
+            }
+
+            section {
+                padding-top: 4rem !important;
+                padding-bottom: 4rem !important;
+            }
+
+            .member-card,
+            .gig-card,
+            .contact-card {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+                padding-top: 1.25rem !important;
+                padding-bottom: 1.25rem !important;
+            }
         }
     </style>
 </head>
@@ -136,16 +173,16 @@
         <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-rock-gold/5 blur-3xl pointer-events-none"></div>
         <div class="absolute bottom-10 left-10 w-80 h-80 rounded-full bg-red-900/10 blur-3xl pointer-events-none"></div>
 
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center z-10 py-16">
+        <div class="hero-content max-w-5xl mx-auto px-4 sm:px-6 text-center z-10 py-16">
             <div class="mb-6">
                 <img src="Images/Schrift.png" alt="Shebang Schriftzug" class="schrift">  
             </div>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-rock-gold text-black font-bold text-lg hover:bg-rock-goldHover transition transform hover:-translate-y-1 shadow-lg shadow-rock-gold/20">
+                <a href="#contact" class="hero-cta w-full sm:w-auto px-8 py-4 rounded-full bg-rock-gold text-black font-bold text-lg hover:bg-rock-goldHover transition transform hover:-translate-y-1 shadow-lg shadow-rock-gold/20">
                     <i class="fa-solid fa-calendar-check mr-2"></i> Band Jetzt Buchen
                 </a>
-                <a href="#gigs" class="w-full sm:w-auto px-8 py-4 rounded-full bg-rock-card border border-rock-border hover:border-rock-gold text-white font-bold text-lg transition transform hover:-translate-y-1">
+                <a href="#gigs" class="hero-cta w-full sm:w-auto px-8 py-4 rounded-full bg-rock-card border border-rock-border hover:border-rock-gold text-white font-bold text-lg transition transform hover:-translate-y-1">
                     <i class="fa-solid fa-ticket mr-2"></i> Nächste Gigs Ansehen
                 </a>
             </div>
@@ -437,7 +474,7 @@
                 </div>
 
                 <!-- Booking Form -->
-                <div class="bg-rock-card p-8 rounded-2xl border border-rock-border">
+                <div class="contact-card bg-rock-card p-8 rounded-2xl border border-rock-border">
                     <form id="booking-form" action="https://formsubmit.co/realshebang@gmail.com" method="POST" class="space-y-6">
                         <input type="hidden" name="_subject" value="Neue Booking-Anfrage von SHEBANG Website">
                         <input type="hidden" name="_captcha" value="false">

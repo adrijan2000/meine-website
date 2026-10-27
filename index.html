@@ -296,7 +296,7 @@
             <h2 class="text-xs font-bold uppercase tracking-widest text-rock-gold mb-2">Setlist & Einflüsse</h2>
             <h3 class="text-4xl font-black text-white mb-6 uppercase">Der Shebang Sound</h3>
             <p class="text-gray-300 font-light leading-relaxed mb-12">
-                Unsere Setlist ist eine energiegeladene Hommage an die wichtigsten Ikonen der Rock- und Musikgeschichte.
+                Von zeitlosen Klassikern bis zu kräftigem Blues Rock
             </p>
 
             <div class="flex flex-wrap justify-center gap-3">
@@ -320,10 +320,16 @@
             </p>
 
             <div id="youtube-video-wrapper" class="mx-auto w-full max-w-4xl overflow-hidden rounded-2xl border border-rock-border bg-stone-900 shadow-2xl shadow-rock-gold/10">
-                <div id="youtube-placeholder" class="flex items-center justify-center min-h-[320px] sm:min-h-[420px] bg-gradient-to-br from-stone-800 via-stone-900 to-rock-card">
-                    <button id="load-youtube" type="button" class="inline-flex items-center gap-3 px-7 py-4 rounded-full bg-rock-gold text-black font-bold text-lg hover:bg-rock-goldHover transition shadow-lg shadow-rock-gold/20">
-                        <i class="fa-brands fa-youtube text-2xl"></i>
-                        Video Abspielen
+                <div id="youtube-placeholder" class="relative aspect-video bg-stone-900">
+                    <img src="https://img.youtube.com/vi/cS-zjokm02U/hqdefault.jpg"
+                         alt="Vorschaubild des SHEBANG Live-Videos"
+                         class="absolute inset-0 h-full w-full object-cover">
+                    <div class="absolute inset-0 bg-black/35 transition hover:bg-black/50"></div>
+                    <button id="load-youtube" type="button" aria-label="SHEBANG Live-Video abspielen" class="absolute inset-0 flex flex-col items-center justify-center gap-3 text-white">
+                        <span class="flex h-16 w-24 items-center justify-center rounded-2xl bg-red-600 shadow-xl transition hover:scale-105">
+                            <i class="fa-brands fa-youtube text-4xl"></i>
+                        </span>
+                        <span class="rounded-full bg-black/70 px-4 py-2 text-sm font-bold sm:text-base">Video abspielen</span>
                     </button>
                 </div>
             </div>
@@ -394,7 +400,7 @@
                             <h4 class="text-xl font-bold text-white">Down Under Aussie Pub</h4>
                             <a class="location-link text-sm text-gray-400 hover:text-rock-gold transition underline underline-offset-4 decoration-dotted"
                                data-location="Magdalenenstraße 32, 1060 Wien"></a>
-                            <span class="inline-block mt-2 text-xs text-rock-gold bg-rock-gold/10 px-2.5 py-1 rounded">Live Gig</span>
+                            <span class="block w-fit mt-2 text-xs text-rock-gold bg-rock-gold/10 px-2.5 py-1 rounded">Eintritt: Freie Spende</span>
                         </div>
                     </div>
                     <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
@@ -431,7 +437,7 @@
                             <h4 class="text-xl font-bold text-white">Down Under Aussie Pub</h4>
                             <a class="location-link text-sm text-gray-400 hover:text-rock-gold transition underline underline-offset-4 decoration-dotted"
                                data-location="Magdalenenstraße 32, 1060 Wien"></a>
-                            <span class="inline-block mt-2 text-xs text-rock-gold bg-rock-gold/10 px-2.5 py-1 rounded">Live Gig</span>
+                            <span class="block w-fit mt-2 text-xs text-rock-gold bg-rock-gold/10 px-2.5 py-1 rounded">Eintritt: Freie Spende</span>
                         </div>
                     </div>
                     <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
@@ -468,7 +474,7 @@
                             <h4 class="text-xl font-bold text-white">Loop Wien</h4>
                             <a class="location-link text-sm text-gray-400 hover:text-rock-gold transition underline underline-offset-4 decoration-dotted"
                                data-location="Gürtelbogen 26-27, 1080 Wien"></a>
-                            <span class="inline-block mt-2 text-xs text-rock-gold bg-rock-gold/10 px-2.5 py-1 rounded">Live Gig</span>
+                            <span class="block w-fit mt-2 text-xs text-rock-gold bg-rock-gold/10 px-2.5 py-1 rounded">Eintritt: Freie Spende</span>
                         </div>
                     </div>
                     <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
@@ -493,6 +499,62 @@
                        
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAST GIGS SECTION -->
+    <section id="past-gigs" class="py-24 bg-stone-950 border-t border-rock-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-rock-gold mb-2">Unsere Highlights</h2>
+                <h3 class="text-4xl font-black text-white uppercase">Vergangene Auftritte</h3>
+                <p class="text-gray-400 mt-2">Danke für die unvergesslichen Abende!</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+                <article class="bg-rock-card rounded-xl border border-rock-border p-6 flex items-center gap-5 hover:border-rock-gold/60 transition">
+                    <time datetime="2026-10" class="bg-stone-900 p-4 rounded-lg border border-rock-border text-center min-w-[90px]">
+                        <span class="block text-xs uppercase tracking-widest text-gray-400">OKTOBER</span>
+                        <span class="text-lg font-black text-rock-gold">2026</span>
+                    </time>
+                    <h4 class="text-lg font-bold text-white">Back to the Roots – Youth Against Cancer</h4>
+                </article>
+                <article class="bg-rock-card rounded-xl border border-rock-border p-6 flex items-center gap-5 hover:border-rock-gold/60 transition">
+                    <time datetime="2026-08" class="bg-stone-900 p-4 rounded-lg border border-rock-border text-center min-w-[90px]">
+                        <span class="block text-xs uppercase tracking-widest text-gray-400">AUGUST</span>
+                        <span class="text-lg font-black text-rock-gold">2026</span>
+                    </time>
+                    <h4 class="text-lg font-bold text-white">Loop Wien</h4>
+                </article>
+                <article class="bg-rock-card rounded-xl border border-rock-border p-6 flex items-center gap-5 hover:border-rock-gold/60 transition">
+                    <time datetime="2026-07" class="bg-stone-900 p-4 rounded-lg border border-rock-border text-center min-w-[90px]">
+                        <span class="block text-xs uppercase tracking-widest text-gray-400">JULI</span>
+                        <span class="text-lg font-black text-rock-gold">2026</span>
+                    </time>
+                    <h4 class="text-lg font-bold text-white">Sportfest – SZU</h4>
+                </article>
+                <article class="bg-rock-card rounded-xl border border-rock-border p-6 flex items-center gap-5 hover:border-rock-gold/60 transition">
+                    <time datetime="2026-06" class="bg-stone-900 p-4 rounded-lg border border-rock-border text-center min-w-[90px]">
+                        <span class="block text-xs uppercase tracking-widest text-gray-400">JUNI</span>
+                        <span class="text-lg font-black text-rock-gold">2026</span>
+                    </time>
+                    <h4 class="text-lg font-bold text-white">Heimfest – SZU</h4>
+                </article>
+                <article class="bg-rock-card rounded-xl border border-rock-border p-6 flex items-center gap-5 hover:border-rock-gold/60 transition">
+                    <time datetime="2026-06" class="bg-stone-900 p-4 rounded-lg border border-rock-border text-center min-w-[90px]">
+                        <span class="block text-xs uppercase tracking-widest text-gray-400">JUNI</span>
+                        <span class="text-lg font-black text-rock-gold">2026</span>
+                    </time>
+                    <h4 class="text-lg font-bold text-white">Rathaus – Vienna School Night</h4>
+                </article>
+                <article class="bg-rock-card rounded-xl border border-rock-border p-6 flex items-center gap-5 hover:border-rock-gold/60 transition">
+                    <time datetime="2026-05" class="bg-stone-900 p-4 rounded-lg border border-rock-border text-center min-w-[90px]">
+                        <span class="block text-xs uppercase tracking-widest text-gray-400">MAI</span>
+                        <span class="text-lg font-black text-rock-gold">2026</span>
+                    </time>
+                    <h4 class="text-lg font-bold text-white">Club 1019</h4>
+                </article>
             </div>
         </div>
     </section>

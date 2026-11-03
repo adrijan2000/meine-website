@@ -597,7 +597,7 @@
 
                 <!-- Booking Form -->
                 <div class="contact-card bg-rock-card p-8 rounded-2xl border border-rock-border">
-                    <form id="booking-form" action="https://formsubmit.co/realshebang@gmail.com" method="POST" class="space-y-6">
+                    <form action="https://formsubmit.co/realshebang@gmail.com" method="POST" class="space-y-6">
                         <input type="hidden" name="_subject" value="Neue Booking-Anfrage von SHEBANG Website">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
@@ -632,9 +632,6 @@
                             Anfrage Senden <i class="fa-solid fa-paper-plane ml-2"></i>
                         </button>
                     </form>
-                    <div id="form-message" class="hidden mt-4 p-4 rounded-lg bg-emerald-900/50 border border-emerald-500 text-emerald-200 text-center text-sm">
-                        Vielen Dank! Deine Booking-Anfrage wurde erfolgreich gesendet.
-                    </div>
                 </div>
             </div>
         </div>
@@ -653,6 +650,8 @@
             </div>
             <div class="text-xs text-gray-600">
                 &copy; 2026 SHEBANG. Alle Rechte vorbehalten.
+                <a href="impressum.html" class="ml-3 text-gray-400 hover:text-rock-gold transition">Impressum</a>
+                <a href="datenschutz.html" class="ml-3 text-gray-400 hover:text-rock-gold transition">Datenschutz</a>
             </div>
         </div>
     </footer>
@@ -774,44 +773,6 @@
             });
         }
 
-        const bookingForm = document.getElementById('booking-form');
-        if (bookingForm) {
-            bookingForm.addEventListener('submit', (event) => {
-                event.preventDefault();
-
-                const formMsg = document.getElementById('form-message');
-                const submitButton = bookingForm.querySelector('button[type="submit"]');
-                submitButton.disabled = true;
-                submitButton.textContent = 'Wird gesendet...';
-
-                const formData = new FormData(bookingForm);
-
-                fetch(bookingForm.action, {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(() => {
-                    formMsg.textContent = 'Vielen Dank! Deine Booking-Anfrage wurde erfolgreich gesendet.';
-                    formMsg.classList.remove('hidden');
-                    formMsg.classList.remove('bg-red-900/50', 'border-red-500', 'text-red-200');
-                    formMsg.classList.add('bg-emerald-900/50', 'border-emerald-500', 'text-emerald-200');
-                    bookingForm.reset();
-                    setTimeout(() => {
-                        formMsg.classList.add('hidden');
-                    }, 5000);
-                })
-                .catch(() => {
-                    formMsg.textContent = 'Es gab ein Problem beim Senden. Bitte schreibe uns direkt an realshebang@gmail.com.';
-                    formMsg.classList.remove('hidden');
-                    formMsg.classList.remove('bg-emerald-900/50', 'border-emerald-500', 'text-emerald-200');
-                    formMsg.classList.add('bg-red-900/50', 'border-red-500', 'text-red-200');
-                })
-                .finally(() => {
-                    submitButton.disabled = false;
-                    submitButton.innerHTML = 'Anfrage Senden <i class="fa-solid fa-paper-plane ml-2"></i>';
-                });
-            });
-        }
     </script>
 </body>
 </html>

@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHEBANG | Classic & Blues Rock Coverband Wien</title>
+    <meta name="description" content="SHEBANG – Classic & Blues Rock Coverband aus Wien. Live-Termine, Hörproben, Video und Booking für Pubs, Festivals und Privatevents.">
+    <link rel="canonical" href="https://shebang-official.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SHEBANG">
+    <meta property="og:locale" content="de_AT">
+    <meta property="og:title" content="SHEBANG | Classic & Blues Rock Coverband Wien">
+    <meta property="og:description" content="Ehrlicher Live-Rock aus Wien: Jimi Hendrix, Eric Clapton, The Doors, The Beatles und mehr. Jetzt Termine ansehen oder die Band buchen.">
+    <meta property="og:url" content="https://shebang-official.com/">
+    <meta property="og:image" content="https://shebang-official.com/Images/Bandfoto.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="Images/Logo-removebg-preview.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -145,8 +155,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
-                <a class="logo">
-                </a>
+                <a href="#" class="logo" aria-label="SHEBANG – nach oben"></a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wider uppercase">
@@ -172,9 +181,9 @@
         <!-- Mobile Dropdown Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-rock-card border-b border-rock-border px-4 pt-2 pb-6 space-y-4 text-center">
             <a href="#about" class="block py-2 text-gray-300 hover:text-rock-gold tracking-wider uppercase">Über Uns</a>
+            <a href="#members" class="block py-2 text-gray-300 hover:text-rock-gold tracking-wider uppercase">Band</a>
             <a href="#repertoire" class="block py-2 text-gray-300 hover:text-rock-gold tracking-wider uppercase">Repertoire</a>
             <a href="#media" class="block py-2 text-gray-300 hover:text-rock-gold tracking-wider uppercase">Media</a>
-            <a href="#members" class="block py-2 text-gray-300 hover:text-rock-gold tracking-wider uppercase">Band</a>
             <a href="#gigs" class="block py-2 text-gray-300 hover:text-rock-gold tracking-wider uppercase">Live Dates</a>
             <a href="#contact" class="inline-block mt-2 w-full py-3 rounded-full bg-rock-gold text-black font-bold tracking-wider uppercase">
                 Booking Anfragen
@@ -188,6 +197,7 @@
         <div class="absolute bottom-10 left-10 w-80 h-80 rounded-full bg-red-900/10 blur-3xl pointer-events-none"></div>
 
         <div class="hero-content max-w-5xl mx-auto px-4 sm:px-6 text-center z-10 py-16">
+            <h1 class="sr-only">SHEBANG – Classic &amp; Blues Rock Coverband aus Wien</h1>
             <div class="mb-6">
                 <img src="Images/Schrift.png" alt="Shebang Schriftzug" class="schrift">  
             </div>
@@ -271,7 +281,7 @@
                     <h4 class="text-xl font-bold text-white mb-1">Lea Gogic</h4>
                     <span class="text-xs uppercase font-bold text-rock-gold tracking-widest mb-4">E-Gitarre & Gesang</span>
                     <p class="text-sm text-gray-400 font-light leading-relaxed">
-                        Liefert kraftvollen Rythmus und Vocals mit garantiertem Gänsehaut-Effekt.
+                        Liefert kraftvollen Rhythmus und Vocals mit garantiertem Gänsehaut-Effekt.
                     </p>
                 </div>
 
@@ -449,6 +459,8 @@
                         <input type="hidden" name="_subject" value="Neue Booking-Anfrage von SHEBANG Website">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
+                        <!-- Spam-Schutz: Dieses Feld bleibt für echte Besucher unsichtbar und leer -->
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
                         <div>
                             <label for="name" class="block text-xs uppercase font-bold tracking-wider text-gray-300 mb-2">Dein Name / Veranstalter</label>
